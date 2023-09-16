@@ -18,5 +18,10 @@
                 <li>利用規約</li>
             </ul>
         </div>
-        
+        <div class='main'>
+            <div class='serach-city'>
+                <h2>ハザードマップの検索</h2>
+                
+            </div>
+        </div>
     </body>
