@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\MapController;
 
 /*
 |--------------------------------------------------------------------------
@@ -16,6 +17,6 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/hello', function () {
-    return view ('index');
-});
+
+Route::get('/map', [MapController::class, 'index']);
+Route::get('/map/use', [MapController::class, 'howuse']);
