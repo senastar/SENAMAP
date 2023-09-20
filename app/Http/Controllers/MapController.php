@@ -14,6 +14,9 @@ public function index(){
 public function howuse(){
     return view ('use');
 }
+public function rules(){
+    return view ('terms');
+}
 }
 
 

@@ -15,7 +15,7 @@
             <ul class="header-list">
                 <li class='header-li'>ログイン</li>
                 <li class='header-li'><a href='/map/use'>使い方</a></li>
-                <li class='header-li'>利用規約</li>
+                <li class='header-li'><a href='/map/terms'>利用規約</a></li>
             </ul>
         </div>
         
