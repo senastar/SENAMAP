@@ -20,3 +20,4 @@ Route::get('/', function () {
 
 Route::get('/map', [MapController::class, 'index']);
 Route::get('/map/use', [MapController::class, 'howuse']);
+Route::get('/map/terms', [MapController::class, 'rules']);
