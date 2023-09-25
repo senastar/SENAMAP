@@ -11,4 +11,6 @@
         <ul>
             <li>この利用規約は</li>
         </ul>
+        <a href="javascript:history.back();">戻る</a>
+
     </body>

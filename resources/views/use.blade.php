@@ -11,4 +11,6 @@
         <ul>
             <li>このウエブサイトは利用者が情報共有し合いハザードマップを作成するサイトです。</li>
         </ul>
+        <a href="javascript:history.back();">戻る</a>
+
     </body>
