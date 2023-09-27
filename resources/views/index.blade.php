@@ -7,6 +7,7 @@
          <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link href="/css/style.css" rel="stylesheet" >
     </head>
+    <x-app-layout>
     <body>
         <h1 class="title">みんなで作るハザードマップ</h1>
         </div>
@@ -14,8 +15,8 @@
         <div class='header'>
             <ul class="header-list">
                 <li class='header-li'>ログイン</li>
-                <li class='header-li'><a href='/map/use'>使い方</a></li>
-                <li class='header-li'><a href='/map/terms'>利用規約</a></li>
+                <li class='header-li'><a href='/use'>使い方</a></li>
+                <li class='header-li'><a href='/terms'>利用規約</a></li>
             </ul>
         </div>
         
@@ -40,5 +41,6 @@
         
         <div class='footer'>
             <h3 class='question'>お問い合わせ</h3>
-        </div> 
+        </div>
+    </x-app-layout>
     </body>
