@@ -7,10 +7,11 @@
          <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
     </head>
     <body>
+    <x-app-layout>
         <h1>使い方</h1>
         <ul>
             <li>このウエブサイトは利用者が情報共有し合いハザードマップを作成するサイトです。</li>
         </ul>
         <a href="javascript:history.back();">戻る</a>
-
+    </x-app-layout>   
     </body>
