@@ -10,7 +10,6 @@
     <x-app-layout>
     <body>
         <h1 class="title">みんなで作るハザードマップ</h1>
-        </div>
         
         <div class='header'>
             <ul class="header-list">
