@@ -17,6 +17,9 @@ public function howuse(){
 public function rules(){
     return view ('terms');
 }
+public function views(){
+    return view ('view');
+}
 }
 
 
