@@ -26,7 +26,7 @@
                    <li class='main-li'>選択肢：市</li>
                    <li class='main-li'>選択肢：区</li>
                </ul>
-              <button type='button'>この条件で閲覧</button>
+              <button type='button'><a href='/view'>この条件で閲覧</a></button>
             </div>
             <div class='header-make'>
                 <h2>危険区域の作成</h2>

@@ -24,7 +24,7 @@ Route::controller(MapController::class)->middleware(['auth'])->group(function(){
     Route::get('/', 'index')->name('index');
     Route::get('/use', 'howuse')->name('use');
     Route::get('/terms', 'rules')->name('terms');
-    
+    Route::get('/view', 'views')->name('view');
     
 });
 
