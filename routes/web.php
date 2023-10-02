@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\MapController;
+use App\Http\Controllers\DistrictController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -24,8 +25,13 @@ Route::controller(MapController::class)->middleware(['auth'])->group(function(){
     Route::get('/', 'index')->name('index');
     Route::get('/use', 'howuse')->name('use');
     Route::get('/terms', 'rules')->name('terms');
-    Route::get('/view', 'views')->name('view');
     
+    
+});
+
+Route::controller(DistrictController::class)->middleware(['auth'])->group(function(){
+    Route::get('/view/{district_name}', 'index')->name('index');
+
 });
 
 Route::middleware('auth')->group(function () {
