@@ -53,8 +53,8 @@
         <script>
         function initMap() {
             position = {
-                lat: 35.7111434,
-                lng: 139.7963807
+                lat: 35.558927656275834,
+                lng:  139.52422926612
             }
 
             const map = new google.maps.Map(document.getElementById('map'), {
@@ -70,10 +70,7 @@
                 position: position,
                 map: map,
             });
-            marker.addListener("click", () => {
-                infoWindow.setContent('雷門');
-                infoWindow.open(map, marker);
-            });
+            
         }
         </script>
         <script
