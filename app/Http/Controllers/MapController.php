@@ -4,12 +4,16 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Map;
+use App\Models\District;
+use App\Models\latslngs;
 
 
 class MapController extends Controller
 {
-public function index(){
-    return view ('index');}
+public function index(District $district){
+    return view ('index')->with(['districts'=> $district->get()]);
+    
+}
     
 public function howuse(){
     return view ('use');
@@ -17,8 +21,8 @@ public function howuse(){
 public function rules(){
     return view ('terms');
 }
-public function views(){
-    return view ('view');
+public function views(latslngs $latslngs){
+    return view ('view')->with(['latslngs'=> $latslngs->get()]);;
 }
 }
 
