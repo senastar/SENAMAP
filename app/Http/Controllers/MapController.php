@@ -10,7 +10,7 @@ use App\Models\latslngs;
 
 class MapController extends Controller
 {
-public function index(District $district){
+public function index(District $district, Request $request){
     return view ('index')->with(['districts'=> $district->get()]);
     
 }
