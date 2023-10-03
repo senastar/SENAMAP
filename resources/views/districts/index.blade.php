@@ -3,10 +3,11 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-     
-        @foreach ($districts as $district)
-        <title>{{$district->district_name}}</title>
+        
+        @foreach($districts as $district)
+        <title>検索結果{{$district->district_name}}</title>
         @endforeach
+        
         
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
@@ -53,11 +54,11 @@
         </div>
 
         <script>
+        @foreach($latslngs as $latslngs)
         function initMap() {
-            position = {
-                lat: 35.558927656275834,
-                lng:  139.52422926612
+            position = {{$latslngs->latlong}}
             }
+            @endforeach
 
             const map = new google.maps.Map(document.getElementById('map'), {
                 center: position,

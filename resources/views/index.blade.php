@@ -22,15 +22,25 @@
         <div class='main'>
             <div class='header-search'>
               <h2>ハザードマップの検索</h2>
-              <div class="category">
-               <h3>選択肢：区</h3>
-               <select name="map[district_id]">
-                   @foreach($districts as $district)
-                       <option value="{{ $district->id}}">{{$district->district_name}}</option>
-                       @endforeach
-               </select>
-              <h3><a href='/view/{{ $district->district_name}}'>{{$district->name}}区で検索"</a></h3>
-            </div>
+                  <div class="category">
+                   <h3>選択肢：区</h3>
+                    <div class="seach">
+                         @foreach($districts as $district)
+                        <form action="/view/{{$district->district_name}}" method="POST">
+                            @endforeach
+                            @csrf
+                              <select>
+                                  @foreach($districts as $district)
+                                  <option value="{{ $district->district_name}}">{{$district->district_name}}</option>
+                                   @endforeach
+                              </select>
+                                
+                                     <div>
+                                       <input type='submit' class-"btn" value="検索">
+                                     </div>
+                        </form>
+                    </div>
+                 </div>
             </div>
             
             
