@@ -21,9 +21,7 @@ public function howuse(){
 public function rules(){
     return view ('terms');
 }
-public function views(latslngs $latslngs){
-    return view ('view')->with(['latslngs'=> $latslngs->get()]);;
-}
+
 }
 
 

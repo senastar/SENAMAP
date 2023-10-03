@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         
-        @foreach($districts as $district)
+     @foreach($districts as $district)
         <title>検索結果{{$district->district_name}}</title>
         @endforeach
         
@@ -54,11 +54,11 @@
         </div>
 
         <script>
-        @foreach($latslngs as $latslngs)
         function initMap() {
-            position = {{$latslngs->latlong}}
+            position = {
+                lat: 35.558927656275834,
+                lng:  139.52422926612
             }
-            @endforeach
 
             const map = new google.maps.Map(document.getElementById('map'), {
                 center: position,

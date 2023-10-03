@@ -27,18 +27,15 @@
                     <div class="seach">
                          @foreach($districts as $district)
                         <form action="/view/{{$district->district_name}}" method="POST">
-                            @endforeach
                             @csrf
                               <select>
-                                  @foreach($districts as $district)
-                                  <option value="{{ $district->district_name}}">{{$district->district_name}}</option>
-                                   @endforeach
+                                  <option value="{{ $district->district_id}}">{{$district->district_name}}</option>
                               </select>
-                                
                                      <div>
                                        <input type='submit' class-"btn" value="検索">
                                      </div>
                         </form>
+                         @endforeach
                     </div>
                  </div>
             </div>
