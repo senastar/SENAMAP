@@ -11,6 +11,6 @@ class District extends Model
     protected $fillable = [
         'id',
         'district_name',
-        'city_id '
+        'city_id'
         ];
 }
