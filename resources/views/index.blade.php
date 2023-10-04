@@ -29,9 +29,9 @@
                         <form action= "/view/get" method="POST">
                             @csrf
                             
-                              <select name ="district[district_name]" >
+                              <select name ="district[district_id]" >
                                   @foreach($districts as $district)
-                                  <option value="{{ $district->district_id}}">{{$district->district_name}}</option>
+                                  <option value="{{ $district->id}}">{{$district->district_name}}</option>
                                   @endforeach
                               </select>
                               
