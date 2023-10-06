@@ -30,7 +30,8 @@ Route::controller(MapController::class)->middleware(['auth'])->group(function(){
 });
 
 Route::controller(DistrictController::class)->middleware(['auth'])->group(function(){
-    Route::post('/view/get', 'index')->name('index');
+    Route::get('view', 'index')->name('view');
+    Route::get('view/{district}', 'show')->name('show');
     
 
 });

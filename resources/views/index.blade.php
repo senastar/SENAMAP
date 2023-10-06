@@ -26,14 +26,15 @@
                    <h3>選択肢：区</h3>
                     <div class="seach">
                          
-                        <form action= "/view/get" method="POST">
+                        <form action="view" method="GET">
                             @csrf
                             
-                              <select name ="district[district_id]" >
+                              <select name="district" >
                                   @foreach($districts as $district)
-                                  <option value="{{ $district->id}}">{{$district->district_name}}</option>
+                                  <option value="{{ $district->id }}">{{$district->district_name}}</option>
                                   @endforeach
                               </select>
+                              <!--<input type="text" name="district" value=1>-->
                               
                                      <div>
                                        <input type='submit' class-"btn" value="検索">
