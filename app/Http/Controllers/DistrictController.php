@@ -12,16 +12,23 @@ use App\Models\City;
 
 class DistrictController extends Controller
 {
-    protected $fillable = [
-        'id',
-        'district_name',
-        'city_id'
-        ];
+    public function index(Request $request){
+       
+        $district = $request->input('district');
+            if(!empty($district)) {
+                return redirect('/view/'.$district );
+            }
+        return redirect('/'); 
+       
+        
+    } 
     
-public function index(District $district, Request $request ){
-    $input = $request['district'];
-    $district->fill($input)->save();
-    return redirect('/view/'.$district->id);
-    
-} 
+    public function show(District $district){
+        
+       
+       return view ('view')->with(['district'=> $district]);
+        
+       
+        
+    } 
 }
