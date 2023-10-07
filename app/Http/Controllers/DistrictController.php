@@ -31,4 +31,24 @@ class DistrictController extends Controller
        
         
     } 
+    
+    public function make(Request $request){
+       
+        $district = $request->input('district');
+            if(!empty($district)) {
+                return redirect('/create/'.$district );
+            }
+        return redirect('/'); 
+       
+        
+    } 
+    
+    public function create(District $district){
+        
+       
+       return view ('create')->with(['district'=> $district]);
+        
+       
+        
+    } 
 }

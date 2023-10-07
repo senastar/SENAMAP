@@ -42,14 +42,7 @@
                 <div id="map"></div>
             </div>
         </div>
-        <div>
-            <div class="content">
-                <div class="title">
-                    Google Map
-                </div>
-                <div id="map"></div>
-            </div>
-        </div>
+       
 
         <script>
         function initMap() {
@@ -78,5 +71,8 @@
             src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_API_KEY') }}&callback=initMap&v=weekly"
             async
         ></script>
+        
+        
+        
     </body>
 </html>

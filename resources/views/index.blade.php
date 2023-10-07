@@ -20,6 +20,7 @@
         </div>
         
         <div class='main'>
+            
             <div class='header-search'>
               <h2>ハザードマップの検索</h2>
                   <div class="category">
@@ -48,12 +49,30 @@
             
             <div class='header-make'>
                 <h2>危険区域の作成</h2>
-                <ul>
-                  <li class='main-li'>選択肢：市</li>
-                  <li class='main-li'>選択肢：区</li>  
-                </ul>
-                <button type='button'>この条件で作成</button>
+                <div class="cate">
+                   <h3>選択肢：区</h3>
+                    <div class="create">
+                         
+                        <form action="create" method="GET">
+                            @csrf
+                            
+                              <select name="district" >
+                                  @foreach($districts as $district)
+                                  <option value="{{ $district->id }}">{{$district->district_name}}</option>
+                                  @endforeach
+                              </select>
+                              <!--<input type="text" name="district" value=1>-->
+                              
+                                     <div>
+                                       <input type='submit' class-"btn" value="作成">
+                                     </div>
+                        </form>
+                         
+                    </div>
+                 </div>
             </div>
+            
+            
         </div>
         
         <div class='footer'>
