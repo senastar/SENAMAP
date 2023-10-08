@@ -6,7 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\Map;
 use App\Models\District;
 use App\Models\City;
-
+use App\Models\Review;
 
 
 
@@ -23,32 +23,17 @@ class DistrictController extends Controller
         
     } 
     
-    public function show(District $district){
+    public function show(District $district, Review $review){
         
        
-       return view ('view')->with(['district'=> $district]);
+       return view ('view')->with(['district'=> $district, 'reviews'=> $review->getPaginateByLimit()]);
         
-       
-        
-    } 
-    
-    public function make(Request $request){
-       
-        $district = $request->input('district');
-            if(!empty($district)) {
-                return redirect('/create/'.$district );
-            }
-        return redirect('/'); 
        
         
     } 
     
-    public function create(District $district){
+    public function make(District $district){
         
-       
-       return view ('create')->with(['district'=> $district]);
-        
-       
-        
-    } 
+        return view ('make')->with(['district'=> $district]);
+    }
 }

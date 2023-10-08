@@ -49,27 +49,8 @@
             
             <div class='header-make'>
                 <h2>危険区域の作成</h2>
-                <div class="cate">
-                   <h3>選択肢：区</h3>
-                    <div class="create">
-                         
-                        <form action="create" method="GET">
-                            @csrf
-                            
-                              <select name="district" >
-                                  @foreach($districts as $district)
-                                  <option value="{{ $district->id }}">{{$district->district_name}}</option>
-                                  @endforeach
-                              </select>
-                              <!--<input type="text" name="district" value=1>-->
-                              
-                                     <div>
-                                       <input type='submit' class-"btn" value="作成">
-                                     </div>
-                        </form>
-                         
-                    </div>
-                 </div>
+                <h3><a href='/make'>作成</a></h3>
+                
             </div>
             
             
