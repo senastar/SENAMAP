@@ -4,12 +4,13 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <title>検索結果{{$district->district_name}}</title>
+        <title>危険区域の作成</title>
         
          <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
         <link href="/css/style.css" rel="stylesheet" >
     </head>
     <body>
-        <h1>{{$district->district_name}}の危険地帯</h1>
+        <h1>危険区域の作成</h1>
+         
         
     </body>

@@ -5,74 +5,21 @@
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
         <title>検索結果{{$district->district_name}}</title>
-        
-        
-        <!-- Fonts -->
-        <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@200;600&display=swap" rel="stylesheet">
-        <!-- Bootstrap -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">    
-    
-        <style>
-            html, body {
-                background-color: #fff;
-                color: #636b6f;
-                font-family: 'Nunito', sans-serif;
-                font-weight: 200;
-                height: 100vh;
-                margin: 10px;
-            }
-            .content {
-                text-align: center;
-            }
-            .title {
-                font-size: 34px;
-            }
-            #map {
-                height: 300px;
-                border: 1px dotted #636b6f;
-            }
-        </style>
+       <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
+        <link href="/css/style.css" rel="stylesheet" >
     </head>
     <body>
-        <div>
-            <div class="content">
-                <div class="title">
-                    Google Map
-                </div>
-                <div id="map"></div>
+       <h1>危険区域</h1>
+       <div class='reviews'>
+             @foreach ($reviews as $review)
+            <div class='review'>
+                <h2 class='body'>{{ $review->body }}</h2>
+                <p class='危険度'>{{ $review->danger }}</p>
             </div>
+            @endforeach
         </div>
-       
-
-        <script>
-        function initMap() {
-            position = {
-                lat: 35.558927656275834,
-                lng:  139.52422926612
-            }
-
-            const map = new google.maps.Map(document.getElementById('map'), {
-                center: position,
-                zoom: 19
-            });
-            const infoWindow = new google.maps.InfoWindow({
-                content: "",
-                disableAutoPan: true,
-            });
-
-            const marker = new google.maps.Marker({
-                position: position,
-                map: map,
-            });
-            
-        }
-        </script>
-        <script
-            src="https://maps.googleapis.com/maps/api/js?key={{ env('GOOGLE_API_KEY') }}&callback=initMap&v=weekly"
-            async
-        ></script>
-        
-        
-        
+       <div class='paginate'>
+            {{ $reviews->links() }}
+        </div>
     </body>
 </html>
