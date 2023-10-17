@@ -50,7 +50,6 @@
             <div class='header-make'>
                 <h2>危険区域の作成</h2>
                 <h3><a href='/make'>作成</a></h3>
-                
             </div>
             
             
