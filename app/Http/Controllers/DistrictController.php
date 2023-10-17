@@ -32,8 +32,18 @@ class DistrictController extends Controller
         
     } 
     
-    public function make(District $district){
+    public function make(District $district, Review $review, Request $request){
         
-        return view ('make')->with(['district'=> $district]);
+        return view ('make')->with(['districts'=> $district->get(), 'reviews'=> $review->get()]);
     }
+    
+    public function store(Request $request, District $district, Review $review){
+        
+    $input = $request['review'];
+    $review->fill($input)->save();
+    return redirect('/');
+
+    return redirect('/');
+}
+
 }
